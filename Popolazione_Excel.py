@@ -43,8 +43,8 @@ def creazione_file_excel(nome_file):
         for utente in range(10):  # Genera 10 utenti
             nome = dati_casuali.first_name()
             cognome = dati_casuali.last_name()
-            email = email_personalizzata(nome, cognome)  # Usa la funzione per generare email personalizzate
-            telefono = telefono_italiano()  # Usa la funzione per generare un numero di telefono italiano
+            email = email_personalizzata(nome, cognome)  # Generazione email personalizzate
+            telefono = telefono_italiano()  # Generazione numeri di telefono italiani
             
             # Inserisce i dati generati all'interno della lista dati_utenti
             dati_utenti.append([nome, cognome, email, telefono])
@@ -78,7 +78,7 @@ def creazione_file_excel(nome_file):
         # Salvataggio file excel
         file_excel.save(nome_file)
         print(f"Il file Excel {nome_file} è stato creato con successo.")
-
+    
     except Exception as e:
         print(f"Si è verificato un errore: {e}")
 
